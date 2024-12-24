@@ -1,28 +1,39 @@
-/* Navbar Styles
-*
-  a
-    font-weight: bold
-.navbar
+nav
   display: flex
-  justify-content: space-between
+  justify-content: space-around
   align-items: center
-  padding: 5px 30px
-  background-color: white
-  color: black
-
-  .logo a
-    background: #30CFD0
-    background-clip: text
-    color: transparent
-    font-family: "Inter", serif
-    font-size: 2.7vw
-
-  .nav-links
-    display: flex
-    gap: 20px
+  margin-bottom: 10px
+  .logo 
+    width: 40%
     a
-      font-size: 20px
-      transition: color 0.3s ease
-      &:hover
-        color: #EE4B2B
+      font-size: 2vw
+      padding: 5px
+      font-weight: bold
+      background: linear-gradient(90deg, rgba(180,58,83,1) 0%, rgba(253,168,29,1) 50%, rgba(252,222,69,1) 100%)
+      -webkit-background-clip: text
+      background-clip: text
+      color: transparent
+      img
+        height: 2vw
+  .nav-links
+    width: 45%
+    display: flex
+    justify-content: space-around
+    align-items: center
+    a
+      font-size: 18px
+      color: white
+      padding: 5px 15px
+    a:hover
+      color: #e3f6f5
+      background-color: #272343
+      border-radius: 5px
+  
+.mobile-nav
+  display: none
 
+@media screen and (max-width: 768px)
+  nav
+    display: none
+  .mobile-nav
+    display: block

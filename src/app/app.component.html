@@ -1,14 +1,31 @@
-
-<nav class="navbar">
+<nav>
   <div class="logo">
-    <a href="">Blood Artz</a>
+    <a href="/">
+      <img src="assets/logo.png" alt="Logo" >Blood Artz
+    </a>
   </div>
   <div class="nav-links">
-    <a href="">Home</a>
+    <a href="/">Home</a>
     <a href="/inspo">Inspiration</a>
     <a href="/contact">Contact</a>
   </div>
 </nav>
 
+<div class="mobile-nav">
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+    aria-controls="offcanvasTop">☰</button>
+
+  <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasTopLabel">☰</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a href="/">Home</a>
+      <a href="/inspo">Inspiration</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </div>
+</div>
 
 <router-outlet></router-outlet>
