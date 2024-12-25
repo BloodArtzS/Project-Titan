@@ -44,7 +44,7 @@
   padding: 15px
   width: 80%
   margin: 0 auto 10px
-  border-radius: 8px
+  border-radius: 10px
   background-color: white
   color: Black
   p
@@ -58,36 +58,24 @@
 @media (max-width: 768px)
   .contact-card
     width: 90%
+    height: auto
     padding: 15px
-
-  .profile-image
-    width: 70%
-
-  .contact-content
-    h2
-      font-size: 1.5rem
-
-    p
-      font-size: 1rem
+    display: flex
+    flex-direction: column
+    .profile-image
+      width: 70%
+    .contact-content
+      width: 90%
+      h2
+        font-size: 1.5rem
+      p
+        font-size: 1rem
 
   .social-links .social-icon
     font-size: 1.5rem
 
-@media (max-width: 480px)
-  .contact-card
-    width: 95%
-    flex-direction: column
-    padding: 10px
+  .help-me
+    a
+      img
+        width: 60px
 
-  .profile-image
-    width: 80%
-
-  .contact-content
-    h2
-      font-size: 1.2rem
-
-    p
-      font-size: 0.9rem
-
-  .social-links .social-icon
-    font-size: 1.2rem

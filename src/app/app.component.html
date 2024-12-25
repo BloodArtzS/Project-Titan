@@ -1,7 +1,7 @@
 <nav>
   <div class="logo">
     <a href="/">
-      <img src="assets/logo.png" alt="Logo" >Blood Artz
+      <img src="assets/logo.png" alt="Logo">Blood Artz
     </a>
   </div>
   <div class="nav-links">
@@ -12,18 +12,27 @@
 </nav>
 
 <div class="mobile-nav">
-  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
-    aria-controls="offcanvasTop">☰</button>
+  <div class="logo">
+    <a href="/">
+      <img src="assets/logo.png" alt="Logo">Blood Artz
+    </a>
+  </div>
+  <div class="mobile-links">
+    <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+      aria-controls="offcanvasTop">☰</button>
 
-  <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasTopLabel">☰</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <a href="/">Home</a>
-      <a href="/inspo">Inspiration</a>
-      <a href="/contact">Contact</a>
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header">
+        <a href="/" class="offcanvas-title" id="offcanvasDarkLabel">
+          <img src="assets/logo.png" alt="Logo">Blood Artz
+        </a>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <li><a href="/">Home</a></li>
+        <li><a href="/inspo">Inspiration</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </div>
     </div>
   </div>
 </div>

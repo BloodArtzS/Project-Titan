@@ -22,12 +22,14 @@ nav
     align-items: center
     a
       font-size: 18px
-      color: white
+      color: #C84C05
       padding: 5px 15px
-    a:hover
-      color: #e3f6f5
-      background-color: #272343
+      background-color: white
       border-radius: 5px
+    a:hover
+      color: black
+      background-color: #DF6D2D
+   
   
 .mobile-nav
   display: none
@@ -36,4 +38,37 @@ nav
   nav
     display: none
   .mobile-nav
-    display: block
+    padding: 5px 0 10px 15px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .logo 
+      width: 40%
+      a
+        font-size: 5vw
+        font-weight: bold
+        background: linear-gradient(90deg, rgba(180,58,83,1) 0%, rgba(253,168,29,1) 50%, rgba(252,222,69,1) 100%)
+        -webkit-background-clip: text
+        background-clip: text
+        color: transparent
+        img
+          height: 6vw
+    .mobile-links
+      width: 20%
+      .offcanvas
+        .offcanvas-header
+          a
+            font-size: 5vw
+            font-weight: bold
+            background: linear-gradient(90deg, rgba(180,58,83,1) 0%, rgba(253,168,29,1) 50%, rgba(252,222,69,1) 100%)
+            -webkit-background-clip: text
+            background-clip: text
+            color: transparent
+            img
+              height: 6vw
+        .offcanvas-body
+          a
+            text-align: left
+            font-size: 18px
+            color: Black
+          
