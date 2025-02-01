@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-inspo',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './inspo.component.sass'
 })
 export class InspoComponent {
+  constructor(private titleService: Title) {}
 
+  ngOnInit() {
+    this.titleService.setTitle('Inspiration Page');
+  }
 }
