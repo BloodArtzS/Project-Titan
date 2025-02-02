@@ -2,7 +2,7 @@ h1
     background: white
     color: Black
     padding: 5px
-    width: 30vw
+    width: 25vw
     height: auto
     margin: 10px auto
     border-radius: 8px
@@ -13,6 +13,8 @@ h1
     justify-content: center
     align-items: space-around
     gap: 10px
+    width: 90%
+    margin: auto
     .image-wrapper
         position: relative
         width: 300px
@@ -26,24 +28,75 @@ h1
         position: absolute
         top: 10px
         left: 10px
-        background: rgba(0, 0, 0, 0.7)
+        font-family: 'Kizard', sans-serif
         color: white
-        font-size: 24px
+        font-size: 5vw
         font-weight: bold
-        padding: 10px 15px
-        border-radius: 50%
+        padding: 0 20px
+        border-radius: 60%
+        text-shadow: 3px 3px 0px black
     .description 
         margin-top: 10px
-        font-size: 14px
+        font-size: 1rem
         max-width: 300px
         
 .content
-    max-width: 600px
-    margin: 15px auto
-    background: rgba(255, 255, 255, 0.1)
-    padding: 20px
+    width: 90%
+    margin: 20px auto
+    background: #FEE715
+    padding: 3%
+    color:  #101820
     border-radius: 10px
-    line-height: 1.6
+    line-height: 1.5
+    p
+        color:  #101820
+    strong
+        color:  #101820
+
+.section-container
+  display: flex
+  flex-direction: column
+  gap: 40px
+
+.content-section
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 20px
+  flex-wrap: wrap
+  font-size: 1.5 rem
+  .text
+    flex: 1
+    max-width: 50%
+    font-size: 16px
+    color:  #101820
+  .image
+    flex: 1
+    max-width: 50%
+    text-align: center
+
+  img
+    width: 100%
+    max-width: 400px
+    border-radius: 10px
+
+/* Reverse layout for second section
+
+.reverse
+  flex-direction: row-reverse
+
+/* Responsive Design for Mobile
+@media (max-width: 768px)
+  .content-section
+    flex-direction: column
+    text-align: center
+
+    .text, .image
+      max-width: 100%
+
+    img
+      max-width: 90%
+
 
 @media (max-width: 768px) 
     h1

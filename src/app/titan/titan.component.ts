@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-titan',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './titan.component.sass'
 })
 export class TitanComponent {
+  constructor(private titleService: Title) {}
 
+  ngOnInit() {
+    this.titleService.setTitle('Project Titan');
+  }
 }
