@@ -2,19 +2,22 @@ nav
   display: flex
   justify-content: space-around
   align-items: center
-  margin: 10px
+  margin: 4px 10px
   .logo 
-    width: 40%
+    display: flex 
+    align-items: center 
+    gap: 10px 
+    text-decoration: none 
+    .logo-img 
+      width: 40px 
+      height: auto 
+    .logo-text 
+      font-size: 24px 
+      font-weight: bold 
+      color: #FF8C00 
     a
-      font-size: 2vw
-      padding: 5px
-      font-weight: bold
-      background: linear-gradient(90deg, rgba(180,58,83,1) 0%, rgba(253,168,29,1) 50%, rgba(252,222,69,1) 100%)
-      -webkit-background-clip: text
-      background-clip: text
-      color: transparent
       img
-        height: 2vw
+        height: 4vw
   .nav-links
     width: 45%
     display: flex
@@ -76,14 +79,8 @@ footer
     .logo 
       width: 40%
       a
-        font-size: 5vw
-        font-weight: bold
-        background: linear-gradient(90deg, rgba(180,58,83,1) 0%, rgba(253,168,29,1) 50%, rgba(252,222,69,1) 100%)
-        -webkit-background-clip: text
-        background-clip: text
-        color: transparent
         img
-          height: 6vw
+          height: 9vw
     .mobile-links
       width: 20%
       .btn 
@@ -94,14 +91,8 @@ footer
 
         .offcanvas-header
           a
-            font-size: 5vw
-            font-weight: bold
-            background: linear-gradient(90deg, rgba(180,58,83,1) 0%, rgba(253,168,29,1) 50%, rgba(252,222,69,1) 100%)
-            -webkit-background-clip: text
-            background-clip: text
-            color: transparent
             img
-              height: 6vw
+              height: 9vw
         .offcanvas-body
           a
             text-align: left
