@@ -49,34 +49,43 @@
 .author-card 
   display: flex 
   align-items: center 
-  background-color: #ffa500 
+  background: linear-gradient(135deg, #e0f2fe, #bae6fd, #93c5fd, #bfdbfe, #dbeafe)
   padding: 30px 
   border-radius: 10px
   width: 90% 
-  margin: 0 auto 25px
+  margin: 30px auto
   height: auto
-  .author-img 
-    width: 40vw 
-    height: 50vh 
-    border-radius: 5% 
-    margin-right: 20px
-    border: white 2px solid
+  video
+    width: 50%
+    border: 1px solid white
+    border-radius: 5px
   .author-details
+    width: 50%
+    padding: 10px
     color: black
     h2
       font-family: 'Kizard', sans-serif
+    p
+      color: #05445E
+      font-size: 18px
+      font-weight: bold
+
 
 /* Media Queries for Responsiveness
 @media (max-width: 768px)
   .author-card
     display: flex
     flex-direction: column
-    .author-img 
-      width: 70vw 
-      height: 30vh
-      margin: 0
+    video 
+      width: 100%
     .author-details
+      width: 100%
       padding: 10px
+      h2
+        
+        font-size: 4vw
+        margin: 10px auto
+        text-align: center
   .cta-section
     width: 90%
     margin: 10px auto
