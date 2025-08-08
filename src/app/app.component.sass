@@ -38,37 +38,43 @@ nav
 .mobile-nav
   display: none
 
-footer
-  background-color: #222
-  color: #fff
-  padding: 20px 10px
-  text-align: center
-  margin-top: 15px
+.custom-footer
+  display: flex
+  justify-content: space-around
+  align-items: center
+  background-color: #2f3741
+  padding: 20px
+  color: white
+  flex-wrap: wrap
+  gap: 15px
 
-  .footer-content
+  .footer-section
     display: flex
-    flex-direction: column
     align-items: center
-    .footer-text
-      font-size: 1.2rem
 
-  .social-links
+  .center
+    flex-direction: column
+    text-align: center
+
+  .footer-logo
+    width: 8vw
+    height: auto
+
+  .social-icons
     display: flex
-    justify-content: center
     gap: 15px
-    img
-      width: 28px
-
-  .social-icon
-    color: #fff
-    font-size: 24px
-    transition: color 0.3s ease
-
-    &:hover
-      color: #f39c12
-
+    font-size: clamp(24px, 2vw, 36px)
+    margin-bottom: 5px
+    a
+      color: white
+      transition: color 0.3s ease
+      &:hover
+        color: #00e5ff
   .footer-text
-    font-size: 14px
+    font-weight: bold
+    font-size: clamp(12px, 1.5vw, 16px)
+    color: white
+    margin: 0
 
 
 @media screen and (max-width: 768px)
@@ -101,8 +107,10 @@ footer
             text-align: left
             font-size: 18px
             color: white
-          
-.footer-content 
-  flex-direction: row
-  justify-content: space-between
-  padding: 0 20px
+    .custom-footer
+      flex-direction: column
+      text-align: center
+      .footer-logo
+        width: 25vw
+      .footer-section
+        justify-content: center

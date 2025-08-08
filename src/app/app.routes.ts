@@ -1,11 +1,11 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from "@angular/core";
-import {AppComponent} from "./app.component";
-import { WelcomeComponent } from './welcome/welcome.component';
-import { TitanComponent } from './titan/titan.component';
-import { InspoComponent } from './inspo/inspo.component';
-import { ContactComponent } from './contact/contact.component';
-import { Chapter1Component } from './titan/chapters/chapter1/chapter1.component';
+import { WelcomeComponent } from '../welcome/welcome.component';
+import { InspoComponent } from '../inspo/inspo.component';
+import { ContactComponent } from '../contact/contact.component';
+import { TitanComponent } from '../titan/titan.component';
+import { Chapter1Component } from '../titan/chapters/chapter1/chapter1.component';
+
 
 export const routes: Routes = [
  { path: '', component: WelcomeComponent},

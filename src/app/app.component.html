@@ -1,7 +1,7 @@
 <nav>
   <div class="logo">
     <a href="/">
-      <img src="assets/home-logo.png" alt="Logo">
+      <img src="assets/home-logo.png" alt="Logo" />
     </a>
   </div>
   <div class="nav-links">
@@ -14,19 +14,36 @@
 <div class="mobile-nav">
   <div class="logo">
     <a href="/">
-      <img src="assets/home-logo.png" alt="Logo">
+      <img src="assets/home-logo.png" alt="Logo" />
     </a>
   </div>
   <div class="mobile-links">
-    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
-      aria-controls="offcanvasTop">☰</button>
+    <button
+      class="btn"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasTop"
+      aria-controls="offcanvasTop"
+    >
+      ☰
+    </button>
 
-    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+    <div
+      class="offcanvas offcanvas-top"
+      tabindex="-1"
+      id="offcanvasTop"
+      aria-labelledby="offcanvasTopLabel"
+    >
       <div class="offcanvas-header">
         <a href="/" class="offcanvas-title" id="offcanvasDarkLabel">
-          <img src="assets/home-logo.png" alt="Logo">
+          <img src="assets/home-logo.png" alt="Logo" />
         </a>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
       </div>
       <div class="offcanvas-body">
         <li><a href="/">Home</a></li>
@@ -39,21 +56,98 @@
 
 <router-outlet></router-outlet>
 
-<footer>
-  <div class="footer-content">
-    <div class="footer-text">
-      <p>&copy; 2025 Blood Artz Studioz. All Rights Reserved.</p>
-    </div>
-    <div class="social-links">
-      <a href="mailto:bloodartzstudioz@gmail.com" class="social-icon">
+<footer class="custom-footer">
+  <!-- Left Logo -->
+  <div class="footer-section left">
+    <svg
+      class="footer-logo"
+      viewBox="0 0 200 200"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_234_877)">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M100 100H0V0H7.04252e-06C55.2285 4.82823e-06 100 44.7715 100 100ZM200 100V0C144.772 0 100 44.7715 100 100L200 100ZM100 200H0V100C55.2285 100 100 144.772 100 200ZM100 200H200V100C144.772 100 100 144.772 100 200Z"
+          fill="url(#paint0_linear_234_877)"
+        />
+      </g>
+      <defs>
+        <linearGradient
+          id="paint0_linear_234_877"
+          x1="100"
+          y1="0"
+          x2="100"
+          y2="200"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#B8DBFC" />
+          <stop offset="1" stop-color="#F8FBFE" />
+        </linearGradient>
+        <clipPath id="clip0_234_877">
+          <rect width="200" height="200" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Center Section -->
+  <div class="footer-section center">
+    <div class="social-icons">
+      <a href="mailto:bloodartzstudioz@gmail.com" aria-label="Email">
         <i class="fas fa-envelope"></i>
       </a>
-      <a href="https://www.instagram.com/bloodart.s4s/" target="_blank" class="social-icon">
-        <img src="assets/Instagram.gif" alt="Instagram" class="instagram-icon">
+      <a
+        href="https://www.youtube.com/@BloodArtzStudioz"
+        target="_blank"
+        class="social-icon"
+        aria-label="YouTube"
+      >
+        <i class="fab fa-youtube"></i>
       </a>
-      <a href="https://www.youtube.com/@BloodArtzStudioz" target="_blank" class="social-icon">
-        <img src="assets/youtube.gif" alt="YouTube" class="youtube-icon">
+
+      <a
+        href="https://www.instagram.com/bloodart.s4s/"
+        target="_blank"
+        aria-label="Instagram"
+      >
+        <i class="fab fa-instagram"></i>
       </a>
     </div>
+    <p class="footer-text" style="font-family: 'Kizard', sans-serif;">DESIGNED BY TEJA © 2025</p>
+  </div>
+
+  <!-- Right Logo -->
+  <div class="footer-section right">
+    <svg
+      class="footer-logo"
+      viewBox="0 0 200 200"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_234_920)">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M0 100L4.37114e-06 0L100 4.37114e-06C100 55.2285 55.2285 100 0 100ZM200 100C200 44.7716 155.228 1.88558e-05 100 4.37114e-06L100 100L6.5969e-06 100C1.76868e-06 155.228 44.7715 200 100 200H200L200 100ZM199.961 100L100 100L100 200C100 144.785 144.75 100.021 199.961 100Z"
+          fill="url(#paint0_linear_234_920)"
+        />
+      </g>
+      <defs>
+        <linearGradient
+          id="paint0_linear_234_920"
+          x1="157.5"
+          y1="32"
+          x2="44"
+          y2="147.5"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0.0509862" stop-color="#FFB6E1" />
+          <stop offset="1" stop-color="#FBE3EA" />
+        </linearGradient>
+        <clipPath id="clip0_234_920">
+          <rect width="200" height="200" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
   </div>
 </footer>

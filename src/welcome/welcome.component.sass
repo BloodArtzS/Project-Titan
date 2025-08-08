@@ -1,0 +1,139 @@
+*
+  font-weight: bold
+  font-family: "Inter", serif
+
+.welcome-video
+  width: 100%
+  margin: auto
+  h1
+    font-size: 4vw
+    margin: 10px 0 10px
+  video
+    width: 100%
+    margin: 10px auto
+    border-radius: 5px
+
+.thanks
+  h1
+    margin: 10px
+    font-family: 'Kizard', sans-serif
+
+.intro-section
+  background: white
+  color: black
+  border-radius: 10px
+  width: 90%
+  margin: auto
+  .intro-card
+    display: flex
+    flex-direction: row-reverse
+    justify-content: space-evenly
+    align-items: center
+    .intro-text
+      h2,p
+        color: black
+  .intro-illustration
+    img
+      width: 100%
+      height: auto
+      display: block
+      border-radius: 10px
+      max-height: 320px
+      object-fit: contain
+
+
+.author-card 
+  display: flex 
+  align-items: center 
+  background: #ffffff	
+  padding: 30px 
+  border-radius: 70%
+  width: 80% 
+  margin: 30px auto
+  height: auto
+  img
+    width: 60%
+    height: 80vh
+    border: 1px solid white
+    border-radius: 50%
+    
+  .author-details
+    width: 50%
+    padding: 10px
+    color: #B20000
+    h2
+      font-family: 'Kizard', sans-serif
+    p
+      color: #1C2321
+      font-size: 18px
+      font-weight: bold
+
+.bookmark
+  width: 30%
+  background: white
+  margin: 0 auto 20px
+  border-radius: 10px
+  padding: 10px
+  p
+    color: black
+    margin: 0
+  .bookmark-btn
+    display: inline-flex
+    align-items: center
+    background: #00f0ff
+    color: black
+    padding: 5px 8px
+    margin: 10px 0
+    font-size: 16px
+    font-family: 'Kizard', sans-serif
+    border: none
+    border-radius: 10px
+    cursor: pointer
+    transition: all 0.3s ease
+    &:hover
+      transform: translateY(-2px)
+      opacity: 0.95
+
+    &:active
+      transform: scale(0.98)
+
+    i
+      font-size: 18px
+
+
+/* Media Queries for Responsiveness
+@media (max-width: 768px)
+  .author-card
+    border-radius: 10px
+    display: flex
+    flex-direction: column
+    padding: 5px
+    width: 85%
+    img
+      width: 100%
+      height: 40vh
+    .author-details
+      width: 100%
+      padding: 10px
+      h2
+        font-size: 4vw
+        margin: 10px auto
+        text-align: center
+      p
+        margin: 0
+  .cta-section
+    width: 90%
+    margin: 10px auto
+    padding: 20px 15px
+    h1
+      font-size: 18px
+    p
+      font-size: 1rem
+      margin: 0 0 15px
+    a
+      font-size: 0.9rem
+      padding: 10px 20px
+  .bookmark
+    width: 60%
+
+
