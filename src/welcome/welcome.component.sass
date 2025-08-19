@@ -7,7 +7,7 @@
   margin: auto
   video
     width: 100%
-    margin: 70px auto 10px
+    margin: 10px auto 
     border-radius: 5px
 
 .thanks
@@ -19,6 +19,7 @@
   background: linear-gradient(to bottom, #7AE2CF, #06202B)
   color: #06202B
   border-radius: 10px
+  padding: 30px 20px
   width: 90%
   margin: auto
   h1
@@ -27,10 +28,11 @@
     margin: 20px 0
   .intro-card
     display: flex
-    justify-content: space-evenly
+    justify-content: space-around
     align-items: center
     .intro-text
-      width: 50%
+      width: 45%
+      padding: 10px
       h2,p
         color: #7AE2CF
       .intro-button
@@ -42,7 +44,7 @@
           border: none
           font-family: 'Kizard', sans-serif
   .intro-illustration
-    width: 50%
+    width: 45%
     img
       width: 100%
       height: auto
@@ -113,6 +115,9 @@
 
 /* Media Queries for Responsiveness
 @media (max-width: 768px)
+  .welcome-video
+    video
+      margin: 70px auto 10px
   .intro-section
     padding: 20px 10px
     .intro-card
