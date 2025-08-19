@@ -12,44 +12,19 @@
 </nav>
 
 <div class="mobile-nav">
-  <div class="logo">
-    <a href="/">
-      <img src="assets/home-logo.png" alt="Logo" />
-    </a>
-  </div>
-  <div class="mobile-links">
-    <button
-      class="btn"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasTop"
-      aria-controls="offcanvasTop"
-    >
-      ☰
-    </button>
+  <div class="bottom-nav">
+    <!-- Logo -->
+    <div class="navbar-left">
+      <a href="/">
+        <img src="assets/home-no-bg.png" alt="Blood Artz Logo" class="logo" />
+      </a>
+    </div>
 
-    <div
-      class="offcanvas offcanvas-top"
-      tabindex="-1"
-      id="offcanvasTop"
-      aria-labelledby="offcanvasTopLabel"
-    >
-      <div class="offcanvas-header">
-        <a href="/" class="offcanvas-title" id="offcanvasDarkLabel">
-          <img src="assets/home-logo.png" alt="Logo" />
-        </a>
-        <button
-          type="button"
-          class="btn-close btn-close-white"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="offcanvas-body">
-        <li><a href="/">Home</a></li>
-        <li><a href="/inspo">Inspiration</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </div>
+    <!-- Mobile Links -->
+    <div class="mobile-links">
+      <a href="/" class="material-symbols-outlined">home_app_logo</a>
+      <a href="/inspo" class="material-symbols-outlined">emoji_objects</a>
+      <a href="/contact" class="material-symbols-outlined">contacts_product</a>
     </div>
   </div>
 </div>
@@ -114,7 +89,9 @@
         <i class="fab fa-instagram"></i>
       </a>
     </div>
-    <p class="footer-text" style="font-family: 'Kizard', sans-serif;">DESIGNED BY TEJA © 2025</p>
+    <p class="footer-text" style="font-family: 'Kizard', sans-serif">
+      DESIGNED BY TEJA © 2025
+    </p>
   </div>
 
   <!-- Right Logo -->

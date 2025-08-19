@@ -5,34 +5,44 @@
 .welcome-video
   width: 100%
   margin: auto
-  h1
-    font-size: 4vw
-    margin: 10px 0 10px
   video
     width: 100%
-    margin: 10px auto
+    margin: 70px auto 10px
     border-radius: 5px
 
 .thanks
   h1
-    margin: 10px
+    margin: 20px 0 10px
     font-family: 'Kizard', sans-serif
 
 .intro-section
-  background: white
-  color: black
+  background: linear-gradient(to bottom, #7AE2CF, #06202B)
+  color: #06202B
   border-radius: 10px
   width: 90%
   margin: auto
+  h1
+    font-family: 'Kizard', sans-serif
+    text-align: center
+    margin: 20px 0
   .intro-card
     display: flex
-    flex-direction: row-reverse
     justify-content: space-evenly
     align-items: center
     .intro-text
+      width: 50%
       h2,p
-        color: black
+        color: #7AE2CF
+      .intro-button
+        a
+          background: #077A7D
+          color: white
+          padding: 10px 20px
+          border-radius: 8px
+          border: none
+          font-family: 'Kizard', sans-serif
   .intro-illustration
+    width: 50%
     img
       width: 100%
       height: auto
@@ -45,7 +55,7 @@
 .author-card 
   display: flex 
   align-items: center 
-  background: #ffffff	
+  background: linear-gradient(to bottom, #EEE2D3, #F4A385)
   padding: 30px 
   border-radius: 70%
   width: 80% 
@@ -68,41 +78,50 @@
       font-size: 18px
       font-weight: bold
 
-.bookmark
-  width: 30%
-  background: white
-  margin: 0 auto 20px
-  border-radius: 10px
-  padding: 10px
-  p
-    color: black
-    margin: 0
-  .bookmark-btn
-    display: inline-flex
-    align-items: center
-    background: #00f0ff
-    color: black
-    padding: 5px 8px
-    margin: 10px 0
-    font-size: 16px
-    font-family: 'Kizard', sans-serif
-    border: none
-    border-radius: 10px
-    cursor: pointer
-    transition: all 0.3s ease
-    &:hover
-      transform: translateY(-2px)
-      opacity: 0.95
+// .bookmark
+//   width: 30%
+//   background: white
+//   margin: 0 auto 20px
+//   border-radius: 10px
+//   padding: 10px
+//   p
+//     color: black
+//     margin: 0
+//   .bookmark-btn
+//     display: inline-flex
+//     align-items: center
+//     background: #00f0ff
+//     color: black
+//     padding: 5px 8px
+//     margin: 10px 0
+//     font-size: 16px
+//     font-family: 'Kizard', sans-serif
+//     border: none
+//     border-radius: 10px
+//     cursor: pointer
+//     transition: all 0.3s ease
+//     &:hover
+//       transform: translateY(-2px)
+//       opacity: 0.95
 
-    &:active
-      transform: scale(0.98)
+//     &:active
+//       transform: scale(0.98)
 
-    i
-      font-size: 18px
+//     i
+//       font-size: 18px
 
 
 /* Media Queries for Responsiveness
 @media (max-width: 768px)
+  .intro-section
+    padding: 20px 10px
+    .intro-card
+      flex-direction: column-reverse
+      justify-content: space-evenly
+      .intro-text
+        width: 100%
+      .intro-illustration
+        width: 80%
   .author-card
     border-radius: 10px
     display: flex
@@ -133,7 +152,7 @@
     a
       font-size: 0.9rem
       padding: 10px 20px
-  .bookmark
-    width: 60%
+  // .bookmark
+  //   width: 60%
 
 

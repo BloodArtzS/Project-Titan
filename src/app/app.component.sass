@@ -37,6 +37,49 @@ nav
   
 .mobile-nav
   display: none
+  color: white
+
+  .bottom-nav
+    width: 90%
+    margin: 10px auto 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px
+    background: linear-gradient(to bottom, #FF585B, #950002)
+    border-radius: 10px
+    position: relative
+
+    .navbar-left
+      width: 60%
+      display: flex
+      align-items: center
+      img
+        width: 70%
+        height: auto
+
+    .menu-toggle
+      font-size: 28px
+      cursor: pointer
+
+    .mobile-links
+      width: 40%
+      display: flex
+      justify-content: space-evenly
+      top: 60px
+      right: 0
+      width: 50%
+      gap: 1rem
+      border-radius: 8px
+      z-index: 100
+
+      a.material-symbols-outlined
+        font-family: 'Material Symbols Outlined'
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        font-size: 28px
+        color: #e3e3e3
+        text-decoration: none
+
 
 .custom-footer
   display: flex
@@ -80,37 +123,20 @@ nav
 @media screen and (max-width: 768px)
   nav
     display: none
+  
   .mobile-nav
-    padding: 5px 0 10px 15px
-    display: flex
-    justify-content: space-between
-    align-items: center
-    .logo 
-      width: 40%
-      a
-        img
-          height: 9vw
-    .mobile-links
-      width: 20%
-      .btn 
-        background: white
-        color: black
-      .offcanvas
-        background: black
-
-        .offcanvas-header
-          a
-            img
-              height: 9vw
-        .offcanvas-body
-          a
-            text-align: left
-            font-size: 18px
-            color: white
-    .custom-footer
-      flex-direction: column
-      text-align: center
-      .footer-logo
-        width: 25vw
-      .footer-section
-        justify-content: center
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 200
+  
+  .custom-footer
+    width: 100%
+    flex-direction: row
+    text-align: center
+    .footer-logo
+      width: 10vw
+    .footer-section
+      justify-content: center
