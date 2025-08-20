@@ -14,7 +14,6 @@ nav
     .logo-text 
       font-size: 24px 
       font-weight: bold 
-      color: #FF8C00 
     a
       img
         height: 4vw
@@ -26,12 +25,12 @@ nav
     a
       font-size: 18px
       font-weight: bolder
-      color: #C84C05
+      color: #DF6D2D
       padding: 6px 20px
-      background-color: white
+      background-color: #661111
       border-radius: 5px
     a:hover
-      color: black
+      color: white
       background-color: #DF6D2D
    
   
@@ -46,9 +45,14 @@ nav
     justify-content: space-between
     align-items: center
     padding: 10px
-    background: linear-gradient(to bottom, #FF585B, #950002)
-    border-radius: 10px
-    position: relative
+    background: radial-gradient(circle at 30% 70%, #e60000 0%, #a80000 40%)
+    border: 1px solid #661111 
+    border-radius: 9999px
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4)
+    position: fixed
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
 
     .navbar-left
       width: 60%
@@ -114,7 +118,7 @@ nav
       &:hover
         color: #00e5ff
   .footer-text
-    font-weight: bold
+    color: #00e5ff
     font-size: clamp(12px, 1.5vw, 16px)
     color: white
     margin: 0
@@ -136,6 +140,7 @@ nav
     width: 100%
     flex-direction: row
     text-align: center
+    padding: 20px 20px 80px
     .footer-logo
       width: 10vw
     .footer-section
