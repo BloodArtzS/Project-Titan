@@ -3,12 +3,12 @@
   font-family: "Inter", serif
 
 .welcome-video
-  width: 100%
+  width: 80%
   margin: auto
   video
     width: 100%
     margin: 10px auto 
-    border-radius: 5px
+    border-radius: 10px
 
 .thanks
   h1
@@ -16,11 +16,11 @@
     font-family: 'Kizard', sans-serif
 
 .intro-section
-  background: linear-gradient(to bottom, #7AE2CF, #06202B)
-  color: #06202B
+  background-color: #0A1A23
+  color: #75E6DA
   border-radius: 10px
   padding: 30px 20px
-  width: 90%
+  width: 80%
   margin: auto
   h1
     font-family: 'Kizard', sans-serif
@@ -35,24 +35,19 @@
       width: 45%
       padding: 10px
       h2,p
-        color: #7AE2CF
+        color: #87ACA3
       .intro-button
         margin: 20px auto
         a
-          background-image: linear-gradient(to right,#134E5E 0%, #71B280  51%, #134E5E  100%)
-          margin: 10px
-          padding: 15px
-          text-align: center
-          text-transform: uppercase
-          transition: 0.5s
-          background-size: 200% auto
-          color: #06202B
-          box-shadow: 0 0 5px #eee
-          border-radius: 10px
-          font-family: 'Kizard', sans-serif
+          background: #00E5FF
+          color: #1F2D36
+          padding: 10px 20px
+          font-size: 1.2rem
+          border: 2px solid #1F2D36
+          border-radius: 8px
+          transition: background 0.3s
           &:hover
             background-position: right center
-            color: #fff
             text-decoration: none
   .intro-illustration
     width: 45%
@@ -64,64 +59,60 @@
       max-height: 320px
       object-fit: contain
 
+.image-container
+    position: relative
+    display: inline-block
+    overflow: hidden
+    img
+      display: block
+      width: 100%
+      height: 50vh
+      object-fit: cover
+      border-radius: 10px
+    &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 40%
+      /* controls how tall the black fade is
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.9))
+
+
+.author-quote
+  text-align: center
+  width: 80%
+  margin: 20px auto
+  font-style: italic  
 
 .author-card 
   display: flex 
   align-items: center 
-  background: linear-gradient(to bottom, #EEE2D3, #F4A385)
-  padding: 30px 
-  border-radius: 70%
+  flex-direction: column
+  color: #FFD700
+  padding: 30px
   width: 80% 
   margin: 30px auto
   height: auto
-  img
-    width: 60%
-    height: 80vh
-    border: 1px solid white
-    border-radius: 50%
-    
+  border-radius: 10px
+  a
+    background: #c84d5b
+    color: #fff
+    text-decoration: none
+    padding: 10px 20px
+    border-radius: 8px
+    font-size: 1.2rem
   .author-details
     width: 50%
     padding: 10px
-    color: #B20000
     h2
       font-family: 'Kizard', sans-serif
     p
-      color: #1C2321
+      color: #00FFFF
       font-size: 18px
       font-weight: bold
-
-// .bookmark
-//   width: 30%
-//   background: white
-//   margin: 0 auto 20px
-//   border-radius: 10px
-//   padding: 10px
-//   p
-//     color: black
-//     margin: 0
-//   .bookmark-btn
-//     display: inline-flex
-//     align-items: center
-//     background: #00f0ff
-//     color: black
-//     padding: 5px 8px
-//     margin: 10px 0
-//     font-size: 16px
-//     font-family: 'Kizard', sans-serif
-//     border: none
-//     border-radius: 10px
-//     cursor: pointer
-//     transition: all 0.3s ease
-//     &:hover
-//       transform: translateY(-2px)
-//       opacity: 0.95
-
-//     &:active
-//       transform: scale(0.98)
-
-//     i
-//       font-size: 18px
+    
 
 
 /* Media Queries for Responsiveness
@@ -149,7 +140,6 @@
     display: flex
     flex-direction: column
     padding: 10px
-    width: 90%
     margin: 15px auto 0
     img
       width: 90%
