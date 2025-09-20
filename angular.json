@@ -20,9 +20,7 @@
             "outputPath": "dist/project-titan",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "sass",
             "assets": [
@@ -33,9 +31,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.sass"
-            ],
+            "styles": ["src/styles.sass"],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -85,22 +81,11 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "sass",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.sass",
-              "src/chapters/titan.component.sass"
-            ],
+            "assets": ["src/favicon.ico", "src/assets", "src/public"],
+            "styles": ["src/styles.sass", "src/chapters/titan.component.sass"],
             "scripts": []
           }
         }

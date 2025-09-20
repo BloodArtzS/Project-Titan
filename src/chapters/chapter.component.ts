@@ -14,4 +14,5 @@ export class ChapterComponent {
   ngOnInit() {
     this.titleService.setTitle('Project Titan');
   }
+
 }

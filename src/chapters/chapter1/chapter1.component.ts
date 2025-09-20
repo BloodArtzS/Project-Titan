@@ -14,4 +14,13 @@ export class Chapter1Component {
     this.titleService.setTitle('Chapter 1 - Project Titan');
   }
 
+  // parent.component.ts
+chapters = [
+  { title: 'Chapter 1: Awake from the Slumber', route: '/chapter1' },
+  { title: 'Chapter 2: The Protocol', route: '/chapter2' },
+  { title: 'Chapter 3: Shadows', route: '/chapter3' },
+  { title: 'Chapter 4: Broken Alliance', route: '/chapter4' },
+];
+
+
 }
