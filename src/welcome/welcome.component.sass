@@ -1,28 +1,25 @@
 *
-  font-weight: bold
-  font-family: "Inter", serif
+  p
+    font-weight: bold
+    font-family: "Inter", serif
 
 .welcome-video
-  width: 80%
+  width: 100%
+  height: auto
   margin: auto
   video
     width: 100%
-    margin: 10px auto 
-    border-radius: 10px
+    margin: 0 auto 30px
+    border-radius: 15px
 
 .thanks
   font-size: 3rem
-
-  /* adjust as needed
   font-weight: bold
-  background: linear-gradient(135deg, #8b8c91, #fcf9f9)
+  background: linear-gradient(135deg, #92ffc0, #f4d03f)
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
   background-clip: text
-
-  /* for browsers that support it
   color: transparent
-
   h1
     margin: 20px 0 10px
     font-family: 'Kizard', sans-serif
@@ -33,72 +30,56 @@
   border-radius: 10px
   padding: 30px 20px
   width: 80%
+  height: auto
   margin: auto
+  box-shadow: 0 0 10px 1px #75E6DA
   h1
     font-family: 'Kizard', sans-serif
     text-align: center
     margin: 20px 0
   .intro-card
     display: flex
-    justify-content: space-around
-    flex-direction: column-reverse
+    justify-content: center
+    flex-direction: row-reverse
     align-items: center
+    margin: 20px auto
     .intro-text
-      width: 45%
+      width: 40%
       padding: 10px
-      h2,p
-        color: #87ACA3
+      p
+        color: #c9faff
       .intro-button
         margin: 20px auto
         a
-          background: #00E5FF
-          color: #1F2D36
+          background: #c9faff
+          color: #0d224b
           padding: 10px 20px
           font-size: 1.2rem
-          border: 2px solid #1F2D36
+          font-family: 'Kizard', sans-serif
+          border: 2px solid #e3fdf9
           border-radius: 8px
-          transition: background 0.3s
           &:hover
-            background-position: right center
-            text-decoration: none
-  .intro-illustration
-    width: 45%
-    img
-      width: 100%
+            background: #fdffd4
+            color: #073737
+            border: 2px solid #fdffd4
+    .latest-poster
+      width: 40%
       height: auto
-      display: block
       border-radius: 10px
-      max-height: 320px
-      object-fit: contain
-
-.image-container
-  position: relative
-  display: inline-block
-  overflow: hidden
-
-  img
-    display: block
-    width: 100%
-    height: 50vh
-    border-radius: 10px
-    margin: 0
-  &::after
-    content: ""
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
-    height: 40%
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.9))
-    z-index: 2
-
+      img
+        width: 100%
+        height: 50vh
+        border-radius: 10px
+        object-fit: contain
+        
 
 
 .author-quote
   text-align: center
   width: 80%
-  margin: 0 auto 20px
-  font-style: italic  
+  margin: 40px auto
+  font-style: italic
+  padding: 10px 
 
 .author-insta
   display: flex
@@ -107,6 +88,7 @@
   margin: 0 0 10px 0
   background: linear-gradient(125deg, #ff512f, #dd2476)
   padding: 10px 20px
+  border: 2px solid #dd2476
   border-radius: 8px
   img
     width: 30px
@@ -117,13 +99,13 @@
     text-decoration: none
     font-size: 1.2rem
 
-.author-card 
-  display: flex 
-  align-items: center 
+.author-card
+  display: flex
+  align-items: center
   flex-direction: column
   color: #ffcc33
   padding: 30px
-  width: 80% 
+  width: 80%
   margin: 30px auto 15px
   height: auto
   border-radius: 10px
@@ -134,8 +116,7 @@
     padding: 10px
     p
       color: #ff0505
-      font-size: 18px
-      font-weight: bold
+      font-size: 16px
     a
       background: transparent
       color: #00FFFF
@@ -144,27 +125,42 @@
       transition: color 0.3s
       &:hover
         color: #FFD700
-    
+  .image-container
+    border-radius: 10px
+    img
+      width: 100%
+      height: 50vh
+      border-radius: 10px
+      object-fit: contain
+      margin: 0
+
+
 .author-inspo
   a
-    background: linear-gradient(360deg, #000000, #ff0000)
-    color: #fff
+    background: linear-gradient(90deg, #f5f523, #fa840e)
+    color: black
     text-decoration: none
     padding: 10px 20px
-    border-radius: 8px
+    border-radius: 10px
     font-size: 1.2rem
+    &:hover
+      background: white
+      color: black
 
 /* Media Queries for Responsiveness
 @media (max-width: 768px)
   .welcome-video
+    width: 100%
     video
-      margin: 0 auto 10px 
+      width: 100%
+      height: auto
+      margin: 0 auto 10px
   .intro-section
     padding: 20px 10px
     h1
       font-size: 1.5rem
       padding: 10px
-      margin: 0 auto 
+      margin: 0 auto
     .intro-card
       flex-direction: column-reverse
       justify-content: space-evenly
@@ -172,9 +168,8 @@
         width: 100%
         p
           font-size: 1rem
-      .intro-illustration
+      .latest-poster
         width: 90%
-
 
   .author-card
     border-radius: 10px
@@ -208,13 +203,13 @@
         height: 15px
       a
         font-size: .8rem
-        
+
     .author-inspo
       margin: 10px auto
       a
         font-size: 1rem
         padding: 7px 10px
-        
+
     .author-quote
       font-size: 1rem
       margin: 10px auto 20px
@@ -231,6 +226,3 @@
     a
       font-size: 0.9rem
       padding: 10px 20px
-
-
-

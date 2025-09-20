@@ -1,0 +1,207 @@
+h1
+  margin: 10px
+  padding: 1rem
+  font-family: 'Kizard', sans-serif
+
+.main-screen
+  display: flex
+  align-items: center
+  justify-content: center
+//styling for new posters on my chapters main page  
+.posting
+  width: 45%
+  height: 50%
+  margin: 1rem auto
+  text-align: center
+  img
+    max-width: 90%
+    max-height: 50%
+    border-radius: 10px
+    object-fit: contain
+.chapters
+  width: 45%
+  margin: 2rem auto
+  padding: 1rem
+  background: #f4f4f4
+  border-radius: 8px
+  color: #333
+  h2
+    margin: 10px
+    padding: 1rem
+    font-family: 'Kizard', sans-serif
+  a
+    width: 100%
+    color: black
+    margin: 0.2rem 0
+    font-size: 1.5rem
+    line-height: 1.6  
+    &:hover
+      color: #1a73e8
+ 
+  
+//greetings for each chapter and styling for all the chapters main page  
+header
+  width: 90%
+  margin: 10px auto 0
+  background-color: white
+  color: black
+  border-radius: 10px
+  padding: 2rem 1rem 1rem
+  text-align: center
+  h1
+    font-size: 2rem
+    margin: 0
+    font-family: 'Kizard', sans-serif
+  p
+    font-size: 1.2rem
+    color: grey
+
+//next chapter and previous chapter links styling
+
+.top-section
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 50%
+    margin: auto
+    span
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        background-image: linear-gradient( 135deg, #65FDF0 10%, #1D6FA3 100%)
+        padding: 10px 15px
+        border-radius: 8px
+        a
+            padding: 0 7px
+            text-decoration: none
+            color: black  
+
+
+ 
+strong
+  color: #d82d2d
+  font-weight: bold 
+
+
+
+
+//styling for each chapter page
+.story
+  width: 50%
+  margin: 20px auto
+  padding: 1rem
+  background: #f4f4f4
+  border-radius: 8px
+  color: #333
+  h1
+    margin: 10px
+    padding: 1rem
+    font-family: 'Kizard', sans-serif
+  h2
+    margin: 10px
+    padding: 1rem
+    color: #555
+    font-family: 'Kizard', sans-serif
+  .story-plot
+    width: 80%
+    margin: 0 auto 2rem auto
+  .chapter-poster
+    width: 50%
+    height: 50%
+    margin: 1rem auto
+    img
+      width: 60%
+      height: 50%
+      border-radius: 8px
+  p
+    width: 100%
+    color: black
+    margin: 0.2rem 0
+    font-size: 1rem
+    line-height: 1.6
+  .dialogue
+    width: 100%
+  .narration
+    margin-bottom: 1rem
+  .action
+    font-style: italic
+    margin-bottom: 1rem
+
+  //styling for youtube music link  
+  .youtube-music
+    background: linear-gradient(145deg, #000000, #000000, #ff0000)
+    border-radius: 15px
+    padding: 1rem
+    text-align: center
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 60px rgba(255, 0, 0, 0.5)
+    transition: transform 0.3s, box-shadow 0.3s
+    margin: 3rem auto
+    h1
+      font-size: 1.5rem
+      color: #FF0000
+    p
+      font-size: 0.95rem
+      color: white
+      margin-bottom: 1rem
+    a
+      display: inline-block
+      padding: 0.7rem 1.5rem
+      background: #FF0000
+      color: white
+      font-weight: bold
+      text-decoration: none
+      border-radius: 8px
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5)
+      transition: background 0.3s, color 0.3s, transform 0.2s
+      &:hover
+        background-image: linear-gradient( 135deg, #FDD819 10%, #E80505 100%)
+        color: black
+        transform: scale(1.05)
+        box-shadow: 0 0 25px rgba(255, 0, 0, 0.8)
+    .disclaimer
+      font-size: 0.8rem
+      margin-top: 1rem
+      color: #999999
+
+/* Responsive Design for Mobile Screens
+@media (max-width: 768px)
+  .main-screen
+    flex-direction: column
+    text-align: center
+    .chapters
+      width: 90%
+      .chapter-list
+        padding: 10px
+        a
+          font-size: 1rem
+  
+  .top-section
+    width: 90%
+    span
+      font-size: 0.8rem
+      a
+        padding: 0 5px
+
+  .story
+    width: 90%
+    .story-plot
+      width: 100%
+    .chapter-poster
+      width: 100%
+      height: auto
+      img
+        width: 80%
+        height: auto
+    p
+      font-size: 0.9rem
+    .youtube-music
+      width: 100%
+      h1
+        font-size: 1.2rem
+      p
+        font-size: 0.85rem
+      a
+        padding: 0.5rem 1rem
+        font-size: 0.9rem
+      .disclaimer
+        font-size: 0.7rem

@@ -5,10 +5,10 @@ import { Title } from '@angular/platform-browser';
   selector: 'app-titan',
   standalone: true,
   imports: [],
-  templateUrl: './titan.component.html',
-  styleUrl: './titan.component.sass'
+  templateUrl: './chapter.component.html',
+  styleUrls: ['./chapter.component.sass']
 })
-export class TitanComponent {
+export class ChapterComponent {
   constructor(private titleService: Title) {}
 
   ngOnInit() {
