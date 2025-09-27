@@ -15,6 +15,7 @@
     bottom: 0
     left: 50%
     transform: translateX(-50%)
+    z-index: 1000
     .navbar-left
       width: 60%
       display: flex
@@ -47,50 +48,92 @@
           z-index: 150
 
 .custom-footer
-  display: flex
-  justify-content: space-around
-  align-items: center
-  padding: 60px 20px 80px
+  background: #151313
   color: white
+  padding: 60px 40px
+  position: relative
+  text-align: center
+
+  margin-top: 40px
+  display: flex
+  justify-content: space-evenly
+  align-items: flex-start
   flex-wrap: wrap
-  gap: 15px
-  margin-bottom: 40px
+
+  svg
+    animation: rotate-logo 20s linear infinite
+
   .footer-section
     display: flex
     align-items: center
-    .footer-text
-      color: white
-      margin: 0
-      font-family: 'Kizard', sans-serif
+
+  .left
+    width: 20%
+    display: flex
+    justify-content: center 
+    align-items: center
+
+  .right
+    width: 20%
+    display: flex
+    justify-content: center
+    align-items: center
 
   .center
-    width: 60%
-    background: linear-gradient(135deg, #004ff9, #000000)
-    border-radius: 15px
-    padding: 20px
-    flex-direction: column
-    text-align: center
-    img
-      width: 15vw
-      margin-bottom: 10px
-
-  .footer-logo
-    width: 8vw
-    height: auto
-
-  .social-icons
+    width: 50%
+    flex: 1
     display: flex
-    gap: 15px
-    font-size: clamp(24px, 2vw, 36px)
-    margin-bottom: 5px
-    a
-      color: white
-      transition: color 0.3s ease
-      i
-        margin: 0 10px
-      i:hover
-        color: #00e5ff
+    flex-direction: column
+    align-items: center
+    gap: 20px
 
+    .footer-links
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      gap: 60px
+      text-align: left
+
+      div
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 8px
+
+        h4
+          font-size: 1rem
+          margin-bottom: 8px
+          font-weight: bold
+        a
+          color: #bbb
+          text-decoration: none
+          font-size: 0.95rem
+          transition: color 0.3s ease
+          &:hover
+            color: #ff5d00
+        i:hover
+          color: #ff5d00
+
+    .footer-bg-text
+      font-size: clamp(3rem, 5vw, 10rem)
+      font-weight: 700
+      color: rgba(255, 255, 255, 0.05)
+      text-transform: uppercase
+      margin: 40px 0
+
+    .footer-text
+      color: #aaa
+      font-size: 0.85rem
+      margin-bottom: 50px
+
+
+@keyframes rotate-logo
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
+  
 @media screen and (max-width: 768px)
   .mobile-nav
     position: fixed
@@ -110,18 +153,32 @@
           font-size: 28px
 
   .custom-footer
-    width: 100%
-    flex-direction: row
-    text-align: center
-    padding: 20px 20px 80px
-    margin: 0
-    .footer-logo
-      width: 10vw
+    flex-direction: column
+    align-items: center
+    padding: 30px 20px 80px 20px
+    svg
+      width: 80px
+      height: 80px
+      margin-bottom: 10px
     .center
+      width: 100%
+      gap: 10px
+      .footer-bg-text
+        font-size: 2rem
+        margin: 20px 0
+        text-transform: none
+      .footer-text
+        font-size: 0.75rem
+      .footer-links
+        display: flex
+        justify-content: center
+        gap: 20px
+    .footer-logo
+      width: 80%
+      margin: 0 auto
       img
-        width: 40vw
-    .footer-section
-      justify-content: center
+        width: 100%
+        height: auto
 
 @media screen and (min-width: 1920px)
   .custom-footer
@@ -129,5 +186,3 @@
     .center
       img
         width: 10vw
-    .footer-logo
-      width: 5vw
