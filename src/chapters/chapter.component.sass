@@ -35,18 +35,6 @@
   align-items: center
   justify-content: center
 
-.dropdown
-  width: 50%
-  margin: 1rem auto
-  .btn
-    background: #1e1e2f
-    color: white
-    font-weight: bold
-    border: 1px solid #444
-    border-radius: 0.5rem
-    cursor: pointer
-
-
 //styling for new posters on my chapters main page  
 .posting
   width: 45%
@@ -79,32 +67,118 @@
     &:hover
       color: #1a73e8
  
-
-//next chapter and previous chapter links styling
+//styling for each chapter page 
+.project-title
+  font-size: 4rem
+  margin: 0
+  color: #75E6DA
+  font-family: 'Kizard', sans-serif
 
 .top-section
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 1rem
+  width: 95%
+  max-width: 800px
+  margin: 2rem auto
+  flex-wrap: wrap 
+
+  // Shared Back / Next button styles
+  .nav-btn
     display: flex
     align-items: center
-    justify-content: space-between
-    width: 50%
-    margin: auto
-    span
-        display: flex
-        align-items: center
-        justify-content: space-evenly
-        background-image: linear-gradient( 135deg, #65FDF0 10%, #1D6FA3 100%)
-        padding: 10px 15px
-        border-radius: 8px
+    gap: 6px
+    background-image: linear-gradient(135deg, #65FDF0 10%, #1D6FA3 100%)
+    padding: 10px 15px
+    border-radius: 8px
+    font-size: 15px
+    font-weight: 500
+    white-space: nowrap // prevents text from breaking into two lines
+    cursor: pointer
+    transition: all 0.3s ease
+
+    a
+      text-decoration: none
+      font-size: 1rem
+      color: #fff
+      font-weight: bold
+
+  // Dropdown
+  .custom-dropdown
+    flex: 1
+    min-width: 140px
+    max-width: 200px
+    text-align: center
+
+    .dropdown-toggle
+      background: #C5172E
+      color: #F3F8FF
+      cursor: pointer
+      padding: 8px 12px
+      border: none
+      border-radius: 8px
+      font-size: 18px
+      font-weight: bold
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1)
+      transition: all 0.3s ease
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+
+      &:hover
+        background: #C5172E
+        color: #F3F8FF
+        transform: translateY(-2px)
+        box-shadow: 0 6px 14px rgba(0,0,0,0.15)
+
+      &:after
+        border-top: .4em solid #fff
+        margin-left: 6px
+
+    .dropdown-menu
+      margin-top: 8px
+      border-radius: 8px
+      border: none
+      padding: 6px 0
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15)
+      animation: dropdownFade 0.25s ease forwards
+      background: #FCF259
+      min-width: 180px
+
+      .dropdown-item
+        padding: 10px 16px
+        font-size: 14px
+        font-weight: 500
+        color: #C5172E
+        transition: all 0.2s ease
+        border-bottom: 2px solid rgba(0,0,0,0.05)
+
+        &:hover
+          background: rgba(74,144,226,0.1)
+          color: #4a90e2
+          padding-left: 20px
+
         a
-            padding: 0 7px
-            text-decoration: none
-            color: black  
+          
+          font-size: 1rem
+          text-decoration: none
+          font-weight: bold
+
+@keyframes dropdownFade
+  0%
+    opacity: 0
+    transform: translateY(-8px)
+  100%
+    opacity: 1
+    transform: translateY(0)
+
  
 strong
   color: #d82d2d
   font-weight: bold 
 
-//styling for each chapter page
 .story
   width: 50%
   margin: 20px auto
@@ -211,12 +285,17 @@ strong
       max-width: 80%
       max-height: 50%
 
+  .project-title
+    font-size: 2rem
+
   .top-section
-    width: 70%
-    span
-      font-size: 0.8rem
-      a
-        padding: 0 5px
+    width: 90%
+    justify-content: center
+    gap: .5rem
+
+    .custom-dropdown
+      flex: unset
+      width: auto
 
   .story
     width: 80%
