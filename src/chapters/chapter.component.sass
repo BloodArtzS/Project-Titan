@@ -1,39 +1,74 @@
-.disclaimer
+.accordion
+  border-left: 4px solid #e63946
   background: #f9f9f9
-  border-left: 4px solid #007bff
-  padding: 15px 20px
-  margin: 0 0 20px 
-  font-family: 'Arial', sans-serif
-  font-size: 1rem
-  line-height: 1.6
-  p
-    margin: 0
-    color: red
-  strong
-    color: #007bff
+  border-radius: 6px
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1)
+  margin: 0 0 20px
+  overflow: hidden
+  transition: all 0.3s ease
+  .accordion-header
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    padding: 12px 15px
+    font-size: 1.1rem
+    font-weight: 600
+    color: #e63946
+    background: #fff5f5
+    user-select: none
 
-.project-name
-  width: 90%
-  margin: 10px auto 0
-  background-color: #0A1A23
-  border-radius: 10px
-  padding: 2rem 1rem 1rem
-  text-align: center
-  box-shadow: 0 0 10px 1px #75E6DA
-  h1
-    font-size: 2rem
-    margin: 0
-    color: #75E6DA
-    font-family: 'Kizard', sans-serif
-  p
-    font-size: 1.2rem
-    font-family: 'Inter', sans-serif
-    color: white
+    .icon
+      font-size: 1.5rem
+      font-weight: bold
+      color: #e63946
+      margin: 0 10px 0
+      transition: transform 0.3s ease
+
+  .accordion-body
+    padding: 12px 15px
+    font-size: 1rem
+    line-height: 1.5
+    background: #f9f9f9
+    border-top: 1px solid rgba(0,0,0,0.05)
+    p
+      margin: 0
+      color: #333
 
 .main-screen
   display: flex
   align-items: center
+  justify-content: space-evenly
+
+.tab-switcher
+  width: 90%
+  margin: 2rem auto
+  text-align: center  
+
+.tabs
+  display: flex
+  gap: 20px
   justify-content: center
+  margin-bottom: 20px
+
+  .tab
+    font-size: 1.2rem
+    font-family: 'Kizard', sans-serif
+    color: white
+    cursor: pointer
+    padding-bottom: 5px
+    position: relative
+
+    &.active
+      color: #C5172E // active text color (red example)
+      &::after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 2px
+        background: #C5172E // active underline color (red example)
 
 //styling for new posters on my chapters main page  
 .posting
@@ -47,8 +82,27 @@
     border-radius: 10px
     object-fit: contain
 
+.project-name
+  width: 70%
+  margin: 10px auto 0
+  background-color: #0A1A23
+  border-radius: 10px
+  padding: 2rem 1rem 1rem
+  box-shadow: 0 0 10px 1px #75E6DA
+  h1
+    font-size: 2rem
+    margin: 0
+    color: #75E6DA
+    font-family: 'Kizard', sans-serif
+  p, li
+    text-align: start
+    font-size: 1.2rem
+    font-family: 'Inter', sans-serif
+    color: white
+    padding: 1rem
+
 .chapters
-  width: 45%
+  width: 70%
   margin: 2rem auto
   padding: 1rem
   background: #f4f4f4
@@ -107,7 +161,7 @@
   // Dropdown
   .custom-dropdown
     flex: 1
-    min-width: 140px
+    min-width: 150px
     max-width: 200px
     text-align: center
 
@@ -115,7 +169,7 @@
       background: #C5172E
       color: #F3F8FF
       cursor: pointer
-      padding: 8px 12px
+      padding: 10px
       border: none
       border-radius: 8px
       font-size: 18px
@@ -144,25 +198,23 @@
       padding: 6px 0
       box-shadow: 0 6px 18px rgba(0,0,0,0.15)
       animation: dropdownFade 0.25s ease forwards
-      background: #FCF259
-      min-width: 180px
+      background: white
+      width: 100%
+      max-height: 300px
 
       .dropdown-item
         padding: 10px 16px
-        font-size: 14px
+        font-size: 18px
         font-weight: 500
         color: #C5172E
         transition: all 0.2s ease
         border-bottom: 2px solid rgba(0,0,0,0.05)
-
         &:hover
           background: rgba(74,144,226,0.1)
           color: #4a90e2
           padding-left: 20px
-
         a
-          
-          font-size: 1rem
+          font-size: 1.5rem
           text-decoration: none
           font-weight: bold
 
@@ -265,16 +317,14 @@ strong
   .main-screen
     flex-direction: column
     text-align: center
+    .project-name
+      width: 90%
     .chapters
-      width: 80%
+      width: 90%
       .chapter-list
         padding: 10px
         a
           font-size: 1rem
-  
-  .dropdown
-    .btn
-      width: 80%
 
   .posting
     width: 100%
@@ -289,7 +339,7 @@ strong
     font-size: 2rem
 
   .top-section
-    width: 95%
+    width: 100%
     justify-content: center
     gap: .5rem
 
