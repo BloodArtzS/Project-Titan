@@ -4,51 +4,61 @@
     font-family: "Inter", serif
 
 .welcome-video
-  width: 90%
+  width: 80%
   height: auto
   margin: auto
   video
     width: 100%
     margin: 0 auto 30px
     border-radius: 15px
-    box-shadow: 0 0 10px 1px red
 
-.thanks
-  font-size: 3rem
-  font-weight: bold
-  background: linear-gradient(135deg, #92ffc0, #f4d03f)
+.thanks h1
+  font-size: clamp(2rem, 3vw, 5rem)
+  font-weight: 700
+  text-transform: uppercase
+  font-family: 'Kizard', sans-serif
+  margin: 40px 0
+
+  /* 🔥 Shimmer effect with orange gradient
+  background: linear-gradient(90deg, rgba(255, 82, 0, 0.18) 0%, rgba(255, 82, 0, 0.9) 50%, rgba(255, 82, 0, 0.18) 100%)
+  background-size: 200% auto
+  color: transparent
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
-  background-clip: text
-  color: transparent
-  h1
-    margin: 20px 0 10px
-    font-family: 'Kizard', sans-serif
+  animation: shine 4s linear infinite
+
+@keyframes shine
+  0%
+    background-position: 200% center
+
+  100%
+    background-position: -200% center 
 
 .intro-section
   background-color: #0A1A23
-  color: #75E6DA
+  color: #f5f5f5
   border-radius: 10px
   padding: 30px 20px
   width: 80%
   height: auto
   margin: auto
-  box-shadow: 0 0 10px 1px #75E6DA
+  border: 1px solid #97FEED
   h1
     font-family: 'Kizard', sans-serif
     text-align: center
+    color: #c9faff
     margin: 20px 0
   .intro-card
     display: flex
-    justify-content: center
+    justify-content: space-evenly
     flex-direction: row-reverse
     align-items: center
     margin: 20px auto
     .intro-text
-      width: 40%
+      width: 60%
       padding: 10px
       p
-        color: #c9faff
+        color: #35A29F
       .intro-button
         margin: 20px auto
         a
@@ -56,39 +66,43 @@
           color: #0d224b
           padding: 10px 20px
           font-size: 1.2rem
-          font-family: 'Kizard', sans-serif
           border: 2px solid #e3fdf9
           border-radius: 8px
           &:hover
-            background: #fdffd4
-            color: #073737
-            border: 2px solid #fdffd4
-
+            background: darken(#c9faff, 5%)
+        i
+          color: #ff6600
     .latest-poster
       width: 40%
       height: auto
       border-radius: 10px
+      display: flex
+      justify-content: center
       img
-        width: 100%
-        height: 50vh
+        width: 25vw
+        height: auto
         border-radius: 10px
-        object-fit: contain
-        
+        object-fit: cover
+        display: block
+        box-shadow: 0 0 10px 1px #75E6DA
+
 .author-quote
   background: white
   color: #0d224b
   border-radius: 10px
   text-align: center
   width: 50%
+  border: 1px solid #0d224b
   margin: 40px auto
   font-style: italic
-  padding: 10px 
+  padding: 10px
 
 .author-insta
+  width: 40%
   display: flex
   align-items: center
   justify-content: center
-  margin: 0 0 10px 0
+  margin: 8px auto
   background: linear-gradient(125deg, #ff512f, #dd2476)
   padding: 10px 20px
   border: 2px solid #dd2476
@@ -102,52 +116,65 @@
     text-decoration: none
     font-size: 1.2rem
 
-.author-card
+.author-bio
+  background: #0d0d0d
+  color: #f5f5f5
+  padding: 4rem 2rem
   display: flex
-  align-items: center
-  flex-direction: column
-  color: #ffcc33
-  padding: 30px
+  justify-content: center
   width: 80%
-  margin: 30px auto 15px
-  height: auto
+  margin: 40px auto
   border-radius: 10px
-  h2
-    font-family: 'Kizard', sans-serif
-  .author-details
-    width: 50%
-    padding: 10px
-    p
-      color: #ff0505
-      font-size: 16px
-    a
-      background: transparent
-      color: #00FFFF
-      text-decoration: none
-      font-size: 1.2rem
-      transition: color 0.3s
-      &:hover
-        color: #FFD700
-  .image-container
-    border-radius: 10px
-    img
-      width: 100%
-      height: 50vh
-      border-radius: 10px
-      object-fit: contain
-      margin: 0
+  border: 1px solid #333
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3)
+  .bio-container
+    display: flex
+    align-items: center
+    max-width: 1100px
+    gap: 2rem
+    flex-wrap: wrap
+    .bio-image img
+      width: 40%
+      height: auto
+      object-fit: cover
+      border-radius: 50%
+      border: 3px solid #e60000
+      box-shadow: 0 0 20px rgba(230, 0, 0, 0.5)
 
-.author-inspo
-  a
-    background: linear-gradient(90deg, #f5f523, #fa840e)
-    color: black
-    text-decoration: none
-    padding: 10px 20px
-    border-radius: 10px
-    font-size: 1.2rem
-    &:hover
-      background: white
-      color: black
+    .bio-content
+      flex: 1
+      min-width: 300px
+
+    .bio-content h2
+      font-size: 2rem
+      margin-bottom: 1rem
+      font-family: 'Kizard', sans-serif
+      color: #e60000
+
+    .bio-content p
+      line-height: 1.6
+      margin-bottom: 1rem
+      font-size: 1rem
+      color: white
+      font-weight: 400
+
+    .highlight
+      color: #ff6600
+      font-weight: bold
+
+    .bio-btn
+      background: linear-gradient(90deg, #e60000, #ff6600)
+      border: none
+      color: white
+      padding: 0.8rem 1.5rem
+      border-radius: 25px
+      cursor: pointer
+      font-size: 1rem
+      transition: transform 0.2s ease, box-shadow 0.2s ease
+      font-weight: bold
+    .bio-btn:hover
+      transform: translateY(-3px)
+      box-shadow: 0 8px 20px rgba(255, 102, 0, 0.4)
 
 /* Media Queries for Responsiveness
 @media (max-width: 768px)
@@ -157,8 +184,10 @@
       width: 100%
       height: auto
       margin: 0 auto 10px
+
   .intro-section
-    padding: 20px 10px
+    padding: 10px
+    width: 90%
     h1
       font-size: 1.5rem
       padding: 10px
@@ -168,63 +197,45 @@
       justify-content: space-evenly
       .intro-text
         width: 100%
+        padding: 5px 5px 0 5px
+        p
+          font-size: .8rem
+          .intro-button
+            margin: 10px auto
+            a
+              padding: 4px
+              font-size: 1rem
+      .latest-poster
+        width: 100%
+        img
+          width: 70%
+          height: auto
+
+  .author-bio
+    width: 90%
+    padding: 2rem 1rem 
+    margin: 20px auto 
+    .bio-container
+      flex-direction: column
+      text-align: center
+      .bio-image img
+        width: 50%
+        height: auto
+        margin: 0 auto
+      .bio-content
+        h2
+          font-size: 1.5rem
         p
           font-size: 1rem
-      .latest-poster
-        width: 90%
-
-  .author-card
-    border-radius: 10px
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    padding: 10px
-    margin: 15px auto 0
-    img
-      width: 90%
-      height: 38vh
-      margin-left: 15px
-      padding: 0
-    .author-details
-      width: 100%
-      padding: 10px
-      h2
-        font-size: 1.5rem
-        margin: 10px auto
-        text-align: center
-      p
-        font-size: 1rem
-        margin: 0
-
-    .author-insta
-      width: 70%
-      padding: 7px 10px
-      img
-        width: 15px
-        height: 15px
-      a
-        font-size: .8rem
-
-    .author-inspo
-      margin: 10px auto
-      a
-        font-size: 1rem
-        padding: 7px 10px
-
-    .author-quote
-      font-size: 1rem
-      margin: 10px auto 20px
-
-  .cta-section
-    width: 90%
-    margin: 10px auto
-    padding: 20px 15px
-    h1
-      font-size: 18px
-    p
-      font-size: 1rem
-      margin: 0 0 15px
-    a
-      font-size: 0.9rem
-      padding: 10px 20px
+        .author-insta
+          width: 80%
+          margin: 10px auto
+          img
+            width: 25px
+            height: 25px
+            margin-right: 8px
+          a
+            font-size: .8rem
+        .bio-btn
+          padding: 0.6rem 1.2rem
+          font-size: 1rem
