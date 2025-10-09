@@ -1,18 +1,17 @@
 <div class="accordion">
   <div class="accordion-header" (click)="toggleAccordion()">
     <strong>Disclaimer</strong>
-    <span class="icon">{{ isOpen ? '−' : '+' }}</span>
+    <span class="icon">{{ isOpen ? "−" : "+" }}</span>
   </div>
   <div class="accordion-body" *ngIf="isOpen">
     <p>
-      I kindly request that you read the content carefully and take a moment
-      to visualize the sequences in the story. Doing so will help you fully
+      I kindly request that you read the content carefully and take a moment to
+      visualize the sequences in the story. Doing so will help you fully
       appreciate the overarching narrative and the intricate beauty of the
       story.
     </p>
   </div>
 </div>
-
 
 <!-- For Sub-Ships (Fleet Names)
 Think of them as “modules” or “nodes” of the mega-station:
@@ -63,24 +62,63 @@ NaviSys International -->
 
     <div class="tab-content">
       <div *ngIf="activeTab === 'synopsis'" class="project-name">
-        <h1>Project Titan</h1>
-        <p>
-          In the year 2205, humanity clings to survival inside four Hydronova -
-          Mega Stations, floating fortresses built after the Earth was swallowed
-          by the seas in a catastrophic flood.
-        </p>
+        <div class="project-summary">
+          <h1>PROJECT TITAN</h1>
+          <p class="tagline">
+            Four fortresses. One drowning world. Humanity’s last breath.
+          </p>
 
-        <h1>Genre</h1>
-        <li>Science Fiction, Dystopian, Action, Adventure, Drama</li>
+          <p class="summary-text">
+            In the year 2205, humanity clings to survival inside four Hydronova
+            — Mega Stations, floating fortresses built after the Earth was
+            swallowed by the seas in a catastrophic flood.
+          </p>
+
+          <hr class="glow-divider" />
+
+          <h1>GENRE</h1>
+          <p class="genre">
+            Science Fiction, Dystopian, Action, Adventure, Drama
+          </p>
+
+          <div class="themes">
+            <span>Time Paradox</span>
+            <span>Survival</span>
+            <span>Rebellion</span>
+          </div>
+
+          <hr class="glow-divider" />
+
+          <a href="#chapters" class="read-more-btn">Start Chapter 1</a>
+        </div>
       </div>
-      <div *ngIf="activeTab === 'chapters'" class="chapters">
-        <h2>Chapters</h2>
+      <div *ngIf="activeTab === 'chapters'" class="chapters-section">
+        <h2 class="chapters-title">Chapters</h2>
         <ul class="chapter-list">
-          <li><a href="chapter1">Chapter 1: Awake from the Slumber</a></li>
-          <li><a href="chapter2">Chapter 2: The Protocol</a></li>
-          <li><a href="chapter3">Chapter 3: Shadows</a></li>
-          <li><a href="chapter4">Chapter 4: Broken Alliance</a></li>
-          <!-- Add more chapters here -->
+          <li>
+            <a href="chapter1">
+              <span class="chapter-number">01</span>
+              <span class="chapter-name">Awake from the Slumber</span>
+            </a>
+          </li>
+          <li>
+            <a href="chapter2">
+              <span class="chapter-number">02</span>
+              <span class="chapter-name">The Protocol</span>
+            </a>
+          </li>
+          <li>
+            <a href="chapter3">
+              <span class="chapter-number">03</span>
+              <span class="chapter-name">Shadows</span>
+            </a>
+          </li>
+          <li>
+            <a href="chapter4">
+              <span class="chapter-number">04</span>
+              <span class="chapter-name">Broken Alliance</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

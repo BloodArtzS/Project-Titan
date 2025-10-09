@@ -6,14 +6,13 @@
   list-style: none
   color: white
 
-
 @font-face
   font-family: 'Kizard'
   src: url('assets/kizard.otf') format('opentype')
   font-weight: normal
   font-style: normal
 
-@font-face 
+@font-face
   font-family: 'Runiga'
   src: url('assets/runiga.otf') format('opentype')
   font-weight: normal
@@ -28,7 +27,6 @@
 a
   text-decoration: none
   font-weight: bold
-  
 
 body
   background-color: #010100
@@ -39,10 +37,27 @@ body
 @media (max-width: 768px)
   #disappear
     display: block
-    font-size: 2rem
+    font-size: 3rem
     text-align: center
-    margin: 15px auto
+    margin: 0.5remauto
     font-family: 'Kizard', sans-serif
-    background: -webkit-linear-gradient(#eee, #333)
+    /* adjust as needed
+    background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #ff0000)
+
+    /* red → orange → yellow → red for looping
+    background-size: 600% 600%
+
+    /* for smooth movement
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
+    animation: gradientAnimation 5s ease infinite
+
+@keyframes gradientAnimation
+  0%
+    background-position: 0% 50%
+
+  50%
+    background-position: 100% 50%
+
+  100%
+    background-position: 0% 50%

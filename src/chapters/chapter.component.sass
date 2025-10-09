@@ -86,38 +86,181 @@
   background: white
   border-radius: 10px
   padding: 2rem 1rem 1rem
-  h1
-    font-size: 2rem
-    margin: 0
-    color: #75E6DA
-    font-family: 'Kizard', sans-serif
-  p, li
-    text-align: start
-    font-size: 1.2rem
-    font-family: 'Inter', sans-serif
-    color: black
-    padding: 1rem
+  background: rgba(255, 255, 255, 0.03)
+  border-radius: 20px
+  padding: 3rem 3rem
+  text-align: center
+  color: #fff
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 255, 255, 0.05)
+  transition: transform 0.3s ease, box-shadow 0.3s ease
+  &:hover
+    transform: translateY(-5px)
+    box-shadow: 0 0 35px rgba(0, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.1)
 
-.chapters
-  width: 70%
-  margin: 2rem auto
-  padding: 1rem
-  background: #f4f4f4
-  border-radius: 8px
-  color: #333
-  h2
-    margin: 10px
-    padding: 1rem
+  h1
     font-family: 'Kizard', sans-serif
-  a
-    width: 100%
-    color: black
-    margin: 0.2rem 0
-    font-size: 1.5rem
-    line-height: 1.6  
+    text-transform: uppercase
+    color: #76ffff
+    font-size: 2rem
+    letter-spacing: 1px
+    text-shadow: 0 0 12px rgba(0, 255, 255, 0.5)
+    margin-bottom: 0.8rem
+
+  .tagline
+    font-size: 1.1rem
+    color: #00f9ff
+    opacity: 0.9
+    font-style: italic
+    margin-top: -0.5rem
+    margin-bottom: 1.8rem
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.4)
+    animation: fadeIn 2s ease-in-out
+
+  .summary-text
+    color: #e6e6e6
+    line-height: 1.7
+    font-size: 1.05rem
+    margin: 0 auto 2rem
+    max-width: 900px
+    opacity: 0.9
+    animation: fadeInUp 1.5s ease-out
+
+  .genre
+    color: #d6d6d6
+    font-size: 1rem
+    margin-bottom: 2rem
+    opacity: 0.8
+
+  .themes
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 1rem
+    margin-bottom: 2rem
+
+    span
+      border: 1px solid rgba(0, 255, 255, 0.4)
+      border-radius: 25px
+      padding: 0.4rem 1.2rem
+      font-size: 0.9rem
+      color: #00f9ff
+      text-shadow: 0 0 6px rgba(0, 255, 255, 0.3)
+      transition: all 0.3s ease
+
+      &:hover
+        background: rgba(0, 255, 255, 0.15)
+        color: #fff
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.4)
+
+  .read-more-btn
+    display: inline-block
+    margin-top: 2rem
+    padding: 0.8rem 2rem
+    background: linear-gradient(90deg, #00f9ff, #007a7a)
+    color: #000
+    font-weight: bold
+    text-transform: uppercase
+    border-radius: 40px
+    font-family: 'Inter', sans-serif
+    text-decoration: none
+    letter-spacing: 1px
+    transition: all 0.3s ease
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3)
+
     &:hover
-      color: #1a73e8
- 
+      transform: scale(1.05)
+      color: #fff
+
+  .glow-divider
+    border: none
+    height: 1px
+    width: 60%
+    margin: 2rem auto
+    background: linear-gradient(90deg, transparent, rgba(0,255,255,0.8), transparent)
+    box-shadow: 0 0 12px rgba(0,255,255,0.5)
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes fadeInUp
+  from
+    opacity: 0
+    transform: translateY(10px)
+  to
+    opacity: 1
+    transform: translateY(0)
+
+.chapters-section
+  width: 70%
+  margin: auto
+  background: rgba(255, 255, 255, 0.03)
+  padding: 3rem 2rem
+  border-radius: 20px
+  color: #e0f7fa
+  text-align: center
+  position: relative
+  overflow: hidden
+
+  .chapters-title
+    font-size: 2.3rem
+    color: #f55d5d
+    text-transform: uppercase
+    font-weight: 700
+    letter-spacing: 3px
+    margin-bottom: 2rem
+    font-family: 'Kizard', sans-serif
+
+  .chapter-list
+    list-style: none
+    padding: 0
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    gap: 1.2rem
+    max-width: 600px
+    animation: fadeIn 2s ease-in-out
+
+    li
+      background: rgba(255, 255, 255, 0.05)
+      backdrop-filter: blur(6px)
+      border: 1px solid rgba(0, 255, 255, 0.15)
+      border-radius: 14px
+      transition: all 0.3s ease
+      overflow: hidden
+
+      a
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        text-decoration: none
+        color: #e0f7fa
+        padding: 1rem 1.5rem
+        transition: all 0.3s ease
+        gap: 1.2rem
+
+        .chapter-number
+          font-size: 1.3rem
+          font-weight: 700
+          color: #00e6e6
+          opacity: 0.8
+
+        .chapter-name
+          font-size: 1.1rem
+          letter-spacing: 0.5px
+          transition: transform 0.3s ease
+
+      &:hover
+        background: rgba(0, 255, 255, 0.08)
+        transform: translateY(-4px)
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.15)
+
+        a .chapter-name
+          transform: translateX(5px)
+          color: #5df5f5
+
 //styling for each chapter page 
 .project-title
   font-size: 4rem
