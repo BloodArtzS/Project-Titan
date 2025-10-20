@@ -29,7 +29,7 @@ export class Chapter1Component {
   async updateViewCount() {
     const namespace = 'bloodartz-netlify-app';
     const key = 'trw-chapter1';
-    const url = `https://api.countapi.dev/update/${namespace}/${key}/?amount=1`;
+    const url = `https://api.countapi.xyz/update/${namespace}/${key}/?amount=1`;
 
     try {
       const res = await fetch(url);
