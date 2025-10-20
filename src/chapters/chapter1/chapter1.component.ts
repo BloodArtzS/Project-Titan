@@ -20,16 +20,16 @@ export class Chapter1Component {
   constructor(private titleService: Title) {}
 
   ngOnInit() {
-    this.titleService.setTitle('Chapter 1 - Project Titan');
+    this.titleService.setTitle('Chapter 1 - Awake from the Slumber');
     if (typeof window !== 'undefined') {
       this.updateViewCount();
     }
   }
 
   async updateViewCount() {
-    const namespace = 'bloodartz.netlify.app';
-    const key = 'chapter1';
-    const url = `https://api.countapi.xyz/hit/${namespace}/${key}`;
+    const namespace = 'bloodartz-netlify-app';
+    const key = 'trw-chapter1';
+    const url = `https://api.countapi.dev/update/${namespace}/${key}/?amount=1`;
 
     try {
       const res = await fetch(url);
