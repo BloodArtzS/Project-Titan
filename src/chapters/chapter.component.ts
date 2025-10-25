@@ -1,5 +1,5 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID, OnInit, AfterViewInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -9,10 +9,19 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './chapter.component.html',
   styleUrls: ['./chapter.component.sass'],
 })
-
-export class ChapterComponent {
-
+export class ChapterComponent implements OnInit, AfterViewInit {
   protected isBrowser: boolean;
+
+  // Tab / Accordion
+  activeTab: string = 'synopsis';
+  isOpen: boolean = false;
+
+  // Dark mode
+  isDarkMode = false;
+
+  // Scroll to top
+  showScrollButton = false;
+  private lastScrollY = 0;
 
   constructor(
     protected titleService: Title,
@@ -21,34 +30,36 @@ export class ChapterComponent {
     this.isBrowser = isPlatformBrowser(platformId);
   }
 
+  // ----------------- Lifecycle -----------------
+  ngOnInit(): void {
+    if (this.isBrowser) {
+      // Dark mode
+      const savedMode = localStorage.getItem('darkMode');
+      this.isDarkMode = savedMode === 'true';
+    }
+  }
+
+  ngAfterViewInit(): void {
+    // Nothing here, safe base
+  }
+
+  // ----------------- Page Title -----------------
   protected setPageTitle(title: string = 'Project Titan'): void {
     this.titleService.setTitle(title);
   }
 
-  // Tab Switcher Logic
-
-  activeTab: string = 'synopsis';
-
+  // ----------------- Tabs & Accordion -----------------
   setTab(tab: string) {
     this.activeTab = tab;
   }
-
-  isOpen: boolean = false;
 
   toggleAccordion() {
     this.isOpen = !this.isOpen;
   }
 
-  // Dark Mode Toggle Logic
-  isDarkMode = false;
-
-  ngOnInit(): void {
-    // Check for saved dark mode preference
-    const savedMode = localStorage.getItem('darkMode');
-    this.isDarkMode = savedMode === 'true';
-  }
-
+  // ----------------- Dark Mode -----------------
   toggleDarkMode(): void {
+    if (!this.isBrowser) return;
     this.isDarkMode = !this.isDarkMode;
     localStorage.setItem('darkMode', this.isDarkMode.toString());
   }
@@ -61,27 +72,31 @@ export class ChapterComponent {
     return this.isDarkMode ? 'Light Mode' : 'Dark Mode';
   }
 
-  // Scroll to Top Button Logic
-  showScrollButton = false;
-  private lastScrollY = 0;
-
+  // ----------------- Scroll Button -----------------
   @HostListener('window:scroll', [])
   onWindowScroll() {
+    if (!this.isBrowser) return;
+
     const currentScroll = window.scrollY;
-
-    // Only show button if user scrolls UP and not at top
-    if (currentScroll < this.lastScrollY && currentScroll > 200) {
-      this.showScrollButton = true;
-    } else {
-      this.showScrollButton = false;
-    }
-
+    this.showScrollButton = currentScroll < this.lastScrollY && currentScroll > 200;
     this.lastScrollY = currentScroll;
   }
 
   scrollToTop(): void {
+    if (!this.isBrowser) return;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  // ----------------- Safe Helpers -----------------
+  protected getDocument(): Document | null {
+    return this.isBrowser ? document : null;
+  }
 
+  protected getItem(key: string): string | null {
+    return this.isBrowser ? localStorage.getItem(key) : null;
+  }
+
+  protected setItem(key: string, value: string): void {
+    if (this.isBrowser) localStorage.setItem(key, value);
+  }
 }
