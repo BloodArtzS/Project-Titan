@@ -32,15 +32,20 @@
 <div class="chapter-meta">
   <span class="read-time">
     <span class="material-symbols-outlined"> schedule </span>
-    4.1 min read
+    14 min read
   </span>
   <!-- <span class="views">
     <span class="material-symbols-outlined"> visibility </span>
-    {{ views }} views
+    0 views
   </span> -->
+  <!-- Dark mode toggle (minimal) -->
+  <span class="dark-mode-toggle" (click)="toggleDarkMode()">
+    <span class="material-symbols-outlined">{{ getDarkModeIcon() }}</span>
+    <span>{{ getDarkModeText() }}</span>
+  </span>
 </div>
 
-<div class="story">
+<div class="story" [class.dark-mode]="isDarkMode">
   <h1>Official Chapter 1 on Oct 25</h1>
   <h1>Draft - Chapter 1</h1>
   <div class="story-plot">
@@ -187,8 +192,6 @@
   </div>
 </div>
 
-<!-- Other content -->
-
 <button
   class="scroll-to-top"
   (click)="scrollToTop()"
@@ -197,19 +200,3 @@
 >
   <span class="material-symbols-outlined"> navigation </span>
 </button>
-
-<!-- YouTube segment section -->
-<!-- <div class="youtube-music">
-    <h1>Enhance Your Reading Experience</h1>
-    <p>Listen to this segment while you read:</p>
-
-    <div class="yt-wrapper">
-      <div id="yt-segment"></div>
-    </div>
-
-    <p class="disclaimer">
-      This clip loops 3 times between 8s and 20s from the original video.  
-      <br />
-      Music © respective artist on YouTube.
-    </p>
-  </div> -->

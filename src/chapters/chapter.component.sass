@@ -46,14 +46,15 @@
 .main-screen
   display: flex
   align-items: center
-  justify-content: space-evenly
+  justify-content: space-between
 
 .tab-switcher
-  width: 90%
+  width: 50%
   margin: 2rem auto
   text-align: center  
 
 .tabs
+  width: 100%
   display: flex
   gap: 20px
   justify-content: center
@@ -66,7 +67,7 @@
     position: relative
 
     &.active
-      color: #C5172E // active text color (red example)
+      color: #ff3800 // active text color (red example)
       &::after
         content: ""
         position: absolute
@@ -87,6 +88,7 @@
     max-height: 50%
     border-radius: 10px
     object-fit: contain
+    border: 1px solid #97FEED
 
 .project-name
   width: 70%
@@ -187,7 +189,6 @@
     background: linear-gradient(90deg, transparent, rgba(0,255,255,0.8), transparent)
     box-shadow: 0 0 12px rgba(0,255,255,0.5)
 
-
 .chapters-section
   width: 70%
   margin: auto
@@ -198,10 +199,10 @@
   text-align: center
   position: relative
   overflow: hidden
-
+  border: 1px solid #66ddaa
   .chapters-title
     font-size: 2.3rem
-    color: #f55d5d
+    color: #66ddaa
     text-transform: uppercase
     font-weight: 700
     letter-spacing: 3px
@@ -353,7 +354,6 @@
           text-decoration: none
           font-weight: bold
 
-
 strong
   color: #d82d2d
   font-weight: bold 
@@ -365,28 +365,34 @@ strong
   background: #f4f4f4
   border-radius: 8px
   color: #333
+  transition: all 0.3s ease
+
   h1
     margin: 10px
     padding: 1rem
     font-family: 'Kizard', sans-serif
+
   h2
     margin: 10px
     padding: 1rem
     color: #555
     font-family: 'Kizard', sans-serif
-    
+
   .story-plot
     width: 80%
     margin: 0 auto 2rem auto
     text-align: start
+
   .chapter-poster
     width: 50%
     height: 50%
     margin: 1rem auto
+
     img
       width: 60%
       height: 50%
       border-radius: 8px
+
   p
     width: 100%
     color: black
@@ -394,15 +400,17 @@ strong
     font-size: 1rem
     text-align: start
     line-height: 1.6
+
   .dialogue
     width: 100%
+
   .narration
     margin-bottom: 1rem
+
   .action
     font-style: italic
     margin-bottom: 1rem
 
-  //styling for youtube music link  
   .youtube-music
     display: flex
     flex-direction: column
@@ -415,14 +423,17 @@ strong
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 60px rgba(255, 0, 0, 0.5)
     transition: transform 0.3s, box-shadow 0.3s
     margin: 3rem auto
+
     h1
       font-size: 1.5rem
       color: #FF0000
+
     p
       font-size: 0.95rem
       color: white
       margin-bottom: 1rem
       text-align: center
+
     a
       display: inline-block
       padding: 0.7rem 1.5rem
@@ -433,15 +444,31 @@ strong
       border-radius: 8px
       box-shadow: 0 0 15px rgba(255, 0, 0, 0.5)
       transition: background 0.3s, color 0.3s, transform 0.2s
+
       &:hover
-        background-image: linear-gradient( 135deg, #FDD819 10%, #E80505 100%)
+        background-image: linear-gradient(135deg, #FDD819 10%, #E80505 100%)
         color: black
         transform: scale(1.05)
         box-shadow: 0 0 25px rgba(255, 0, 0, 0.8)
+
     .disclaimer
       font-size: 0.8rem
       margin-top: 1rem
       color: #999999
+
+  &.dark-mode
+    background: #1a1a1a
+    color: #e0e0e0
+
+    h1,
+    h2
+      color: #f0f0f0
+
+    p
+      color: #d0d0d0
+
+    .youtube-music
+      background: linear-gradient(145deg, #0a0a0a, #1a0000, #ff4040)
 
 .chapter-meta
   display: flex
@@ -485,6 +512,57 @@ strong
       transform: scale(1.1)
       text-shadow: 0 0 10px rgba(255, 80, 80, 0.6)
 
+// Dark Mode Styles
+.dark-mode-toggle
+  display: flex
+  align-items: center
+  gap: 0.5rem
+  cursor: pointer
+  padding: 0.5rem
+  border-radius: 20px
+  transition: all 0.3s ease
+  background: rgba(255, 255, 255, 0.1)
+
+  &:hover
+    background: rgba(255, 255, 255, 0.2)
+
+  .material-symbols-outlined
+    font-size: 1.5rem
+    color: #ff4040
+
+  span:last-child
+    font-size: 0.9rem
+    color: #d6d6d6
+
+//top scroll button styling
+.scroll-to-top
+  position: fixed
+  bottom: 25px
+  right: 18%
+  background: linear-gradient(135deg, #1e1e2f, #4a4aff)
+  color: white
+  border: none
+  outline: none
+  width: 63px
+  height: 63px
+  font-size: 36px
+  border-radius: 50%
+  cursor: pointer
+  opacity: 0
+  visibility: hidden
+  transition: all 0.4s ease
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3)
+  z-index: 9999
+
+  &:hover
+    transform: scale(1.15)
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4)
+    background: linear-gradient(135deg, #4a4aff, #1e1e2f)
+
+  &.visible
+    opacity: 1
+    visibility: visible
+
 
   
 
@@ -505,6 +583,9 @@ strong
       .chapter-name
         font-size: 1.2rem
         text-align: start
+        
+  .tab-switcher
+    width: 90%
 
   .posting
     width: 100%
