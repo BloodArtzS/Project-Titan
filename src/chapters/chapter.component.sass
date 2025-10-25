@@ -358,6 +358,7 @@ strong
   color: #d82d2d
   font-weight: bold 
 
+//Actual Story Content Styling  
 .story
   width: 50%
   margin: 20px auto
@@ -371,6 +372,14 @@ strong
     margin: 10px
     padding: 1rem
     font-family: 'Kizard', sans-serif
+  #chapters-title
+    width: fit-content
+    margin: 0 auto 1rem auto
+    font-size: 1.5rem
+    padding: 1rem
+    background: black
+    color: #75E6DA
+    border-radius: 8px
 
   h2
     margin: 10px
@@ -386,12 +395,24 @@ strong
   .chapter-poster
     width: 50%
     height: 50%
-    margin: 1rem auto
-
-    img
-      width: 60%
-      height: 50%
-      border-radius: 8px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 2rem auto
+    &.portrait
+      width: 40%       // portrait narrower width
+      img
+        width: 100%
+        height: auto
+        border-radius: 8px
+        box-shadow: 0 0 15px rgba(0,0,0,0.3)
+    &.landscape
+      width: 80%       // landscape wider width
+      img
+        width: 100%
+        height: auto
+        border-radius: 8px
+        box-shadow: 0 0 15px rgba(0,0,0,0.3)
 
   p
     width: 100%
@@ -400,6 +421,9 @@ strong
     font-size: 1rem
     text-align: start
     line-height: 1.6
+  i
+    color: #555
+    font-style: italic
 
   .dialogue
     width: 100%
@@ -410,6 +434,16 @@ strong
   .action
     font-style: italic
     margin-bottom: 1rem
+    i
+      color: #ff3800
+
+  .scene-divider
+    width: 80%
+    height: 2px
+    background: linear-gradient(to right, rgba(255,165,0,0), rgba(255,165,0,1), rgba(255,165,0,0))
+    margin: 2rem auto
+    border-radius: 2px
+    opacity: 0.7
 
   .youtube-music
     display: flex
@@ -419,7 +453,8 @@ strong
     text-align: center
     background: linear-gradient(145deg, #0a0a0a, #1a0000, #ff0000)
     border-radius: 15px
-    padding: 1rem
+    padding: 1rem 5rem
+    width: fit-content
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 60px rgba(255, 0, 0, 0.5)
     transition: transform 0.3s, box-shadow 0.3s
     margin: 3rem auto
@@ -456,19 +491,56 @@ strong
       margin-top: 1rem
       color: #999999
 
+.my-signature
+  width: 50%
+  margin: 3rem auto 5rem auto
+  padding: 2rem 1rem
+  display: flex
+  flex-direction: column
+  align-items: end
+  justify-content: flex-end
+  margin: auto
+  font-family: 'Kizard', sans-serif
+  color: #FF6600
+  transition: all 0.3s ease
+  p
+    margin: 0.2rem 0
+    font-size: 1rem
+    color: #DCDCDC
+    font-family: 'Inter', sans-serif
+    font-weight: bold
+  h3
+    margin: 0.5rem 0
+    font-size: 2rem
+    color: #40E0D0
+    font-weight: bold
+    font-family: 'Kizard', sans-serif
+  .subtitle
+    font-size: 1rem
+    color: #FF6600
+    font-family: 'Taken by Vultures', cursive
+    font-style: italic
+
   &.dark-mode
     background: #1a1a1a
     color: #e0e0e0
 
-    h1,
-    h2
+    h1, h2
       color: #f0f0f0
 
     p
       color: #d0d0d0
 
+    .action i
+      color: #ff7070
+
+    .scene-divider
+      background: linear-gradient(to right, rgba(255,140,0,0), rgba(255,140,0,1), rgba(255,140,0,0))
+
     .youtube-music
       background: linear-gradient(145deg, #0a0a0a, #1a0000, #ff4040)
+      h1, p, a
+        color: #f0f0f0
 
 .chapter-meta
   display: flex
@@ -562,9 +634,7 @@ strong
   &.visible
     opacity: 1
     visibility: visible
-
-
-  
+ 
 
 /* Responsive Design for Mobile Screens
 @media (max-width: 768px)
@@ -589,8 +659,11 @@ strong
 
   //top scroll button styling
   .scroll-to-top
+    width: 45px
+    height: 45px
+    font-size: 28px
     bottom: 80px
-    right: 7%
+    right: 35px
 
   .posting
     width: 100%
@@ -615,14 +688,28 @@ strong
 
   .story
     width: 90%
+
     .story-plot
       width: 100%
+        
+
     .chapter-poster
       width: 100%
       height: auto
-      img
-        width: 80%
-        height: auto
+      &.portrait
+        width: 80%       // portrait narrower width
+        img
+          width: 100%
+          height: auto
+          border-radius: 8px
+          box-shadow: 0 0 15px rgba(0,0,0,0.3)
+      &.landscape
+        width: 100%       // landscape wider width
+        img
+          width: 100%
+          height: auto
+          border-radius: 8px
+          box-shadow: 0 0 15px rgba(0,0,0,0.3)
     p
       font-size: 0.9rem
       line-height: 1.4
@@ -637,3 +724,12 @@ strong
         font-size: 0.9rem
       .disclaimer
         font-size: 0.7rem
+
+  .my-signature
+    width: 80%
+    margin: 2rem auto 4rem auto
+    padding: 1.5rem 1rem
+    h3
+      font-size: 1.5rem
+    .subtitle
+      font-size: 0.9rem
